@@ -36,9 +36,14 @@ rm -rf build portlistener.spec
 
 **For portscanner.py (Client)**
 
+```bash
+pyinstaller --onefile --distpath ./bin src/portscanner.py
+rm -rf build portscanner.spec
+```
+
 This will generate the executables in the ./bin directory.
 
-### Usage
+## Usage
 
 **Running the Server (Port Listener)**
 
