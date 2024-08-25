@@ -19,7 +19,7 @@
 ### Step 1: Clone the Repository
 
 ```bash
-git clone <https://github.com/nineking424/portscanner.git>
+git clone https://github.com/nineking424/portscanner.git
 cd portscanner
 ```
 
