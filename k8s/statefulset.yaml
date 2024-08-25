@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: portscanner-hl
+  labels:
+    app: portscanner
+spec:
+  clusterIP: None
+  ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+  selector:
+    app: portscanner
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: portscanner
+  labels:
+    app: portscanner
+spec:
+  serviceName: portscanner-hl
+  replicas: 3
+  selector:
+    matchLabels:
+      app: portscanner
+  template:
+    metadata:
+      labels:
+        app: portscanner
+    spec:
+      containers:
+      - name: portscanner
+        image: nineking424/portscanner:latest
+        ports:
+        - containerPort: 8080
+          name: portscan-port
