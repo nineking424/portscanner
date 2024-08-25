@@ -61,7 +61,7 @@ python src/portlistener.py 8080,8000-8005
 
 - This example starts the server listening on port 8080 and ports 8000 through 8005.
 
-### **Running the Client (Port Scanner)**
+**Running the Client (Port Scanner)**
 
 The client connects to the server’s specified IP and port range to test if the ports are open. It sends a “ping” message to each port and receives a response.
 
@@ -106,7 +106,7 @@ The server will log connection attempts, and the client will display the results
 
 To stop the server gracefully, use Ctrl+C. This will trigger a shutdown of all active connections.
 
-### **How It Works**
+## How It Works
 
 - The **Server** (portlistener.py) binds to the specified ports and listens for incoming connections using multi-threading to handle multiple clients concurrently. It logs connection attempts and echoes back any received data.
 - The **Client** (portscanner.py) attempts to connect to each port in the given range on the server’s IP address, sending a “ping” message and logging the server’s response.
