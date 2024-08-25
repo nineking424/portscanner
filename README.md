@@ -1,5 +1,3 @@
-# README.md
-
 # PortScanner
 
 `PortScanner` is a lightweight tool designed to facilitate port scanning by using both a server and a client component. This project allows you to scan for open ports on a server by sending data and receiving responses from a designated set of ports. It consists of a server component that listens on specified ports and a client component that connects to those ports to check their availability.
