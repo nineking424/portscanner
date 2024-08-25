@@ -38,7 +38,7 @@ rm -rf build portlistener.spec
 
 This will generate the executables in the ./bin directory.
 
-**Usage**
+### Usage
 
 **Running the Server (Port Listener)**
 
